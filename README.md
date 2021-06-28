@@ -3,7 +3,7 @@ I Developed a Tic-Tac-Toe Game Using Python
 
 #Entire Code Given Below
 
-#SrikPygame Project SrikTicTacToe
+# SrikPygame Project SrikTicTacToe
 
 import pygame, sys
 
@@ -11,7 +11,7 @@ import numpy as np
 
 pygame.init()
  
-#Dimensions According to my Analysis
+# Dimensions According to my Analysis
 
 WIDTH = 600
 HEIGHT = 600
@@ -79,18 +79,18 @@ def check_win(player):
             draw_vertical_winning_line(col , player)
             return True 
 
-    #Horizontal Win Check
+    # Horizontal Win Check
     
     for row in range(BOARD_ROWS):
         if board[row][0] == player and board[row][1] == player and board[row][2] == player:
             draw_horizontal_winning_line(row, player)
             return True 
-    #Ascending Diagonol Win Check
+    # Ascending Diagonol Win Check
     
     if board[2][0] == player and board[1][1] == player and board[0][2] == player:
         draw_asc_diagonal(player)
         return True
-    #Descending Diagonal Win Check
+    # Descending Diagonal Win Check
     
     if board[0][0] == player and board[1][1] == player and board[2][2] == player:
         draw_desc_diagonal(player)
@@ -171,6 +171,6 @@ while True:
                 
     pygame.display.update()
 
-#Analysis Before Writing the Code 
+# Analysis Before Writing the Code 
 
 [Srikar Pygame Tictactoe Analysis](https://user-images.githubusercontent.com/67857677/123699260-afafa400-d87c-11eb-975d-719181190f17.png)
