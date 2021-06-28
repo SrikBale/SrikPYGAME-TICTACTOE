@@ -51,7 +51,7 @@ def draw_figures():
     for row in range(BOARD_ROWS):
         for col in range(BOARD_COLS):
             if board[row][col] == 1:
-                pygame.draw.circle( screen , CIRCLE_COLOR , (int(col * 200 + 100) , int(row * 200 + 100)) , CIRCLE_RADIUS , CIRCLE_WIDTH)
+                pygame.draw.circle( screen , CIRCLE_COLOR , (int(col * 200 + 100) , int(row * 200 + 100)) , CIRCLE_RADIUS , CIRCLE_WIDTH)!
             elif board[row][col] == 2:
                 pygame.draw.line(  screen , CROSS_COLOR , (col * 200 + SPACE, row * 200 + 200 - SPACE ) , (col * 200 + 200 - SPACE , row * 200 + SPACE) , CROSS_WIDTH)
                 pygame.draw.line(  screen , CROSS_COLOR , (col * 200 + SPACE, row * 200 + SPACE) , (col * 200 + 200 - SPACE , row * 200 + 200 - SPACE) , CROSS_WIDTH)
@@ -170,3 +170,7 @@ while True:
       
                 
     pygame.display.update()
+
+#Analysis Before Writing the Code 
+
+[Srikar Pygame Tictactoe Analysis](https://user-images.githubusercontent.com/67857677/123699260-afafa400-d87c-11eb-975d-719181190f17.png)
