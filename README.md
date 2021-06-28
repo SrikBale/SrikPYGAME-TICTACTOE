@@ -1,16 +1,17 @@
 # SrikPYGAME-TICTACTOE
 I Developed a Tic-Tac-Toe Game Using Python
 
-##Code Given Below
+#Entire Code Given Below
 
 #SrikPygame Project SrikTicTacToe
+
 import pygame, sys
 
 import numpy as np 
 
 pygame.init()
-
-# Dimensions According my Analysis Given Below 
+ 
+#Dimensions According to my Analysis
 
 WIDTH = 600
 HEIGHT = 600
@@ -31,7 +32,7 @@ screen = pygame.display.set_mode( (WIDTH , HEIGHT))
 pygame.display.set_caption('Srik TIC TAC TOE ')
 screen.fill(BG_COLOR)
 
-# board
+#BOARD DETAILS
 board = np.zeros( (BOARD_ROWS , BOARD_COLS) )
 #print(board)
 #pygame.draw.line( screen, RED, (10,10) , (300,300), 10)
@@ -78,16 +79,19 @@ def check_win(player):
             draw_vertical_winning_line(col , player)
             return True 
 
-    # Horizontal Win Check 
+    #Horizontal Win Check
+    
     for row in range(BOARD_ROWS):
         if board[row][0] == player and board[row][1] == player and board[row][2] == player:
             draw_horizontal_winning_line(row, player)
             return True 
-    # Ascending Diagonol Win Check 
+    #Ascending Diagonol Win Check
+    
     if board[2][0] == player and board[1][1] == player and board[0][2] == player:
         draw_asc_diagonal(player)
         return True
-    #Descending Diagonal Win Check 
+    #Descending Diagonal Win Check
+    
     if board[0][0] == player and board[1][1] == player and board[2][2] == player:
         draw_desc_diagonal(player)
         return True
@@ -135,6 +139,7 @@ player = 1
 game_over = False
 
 # MainLoop 
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
